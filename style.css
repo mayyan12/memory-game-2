@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Cinzel", serif;
+}
+
+.hr {
+  height: 10px;
+  border-width: 0;
+  background-color: #b0cdb0ca;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-left,
+.img-right {
+  width: 100px; /* Adjust the width as desired */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 20px; /* Adjust margin as desired */
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+}
+
+.img-left {
+  left: 0;
+}
+
+.img-right {
+  right: 0;
+}
+
+.hder {
+  color: #ff5733;
+  color: transparent;
+  -webkit-text-stroke: 2px #d4c23e;
+  animation: animate 10s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      30% 40%,
+      /* Top-left */ 100% 0%,
+      /* Top-right */ 100% 100%,
+      /* Bottom-right */ 0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 0%,
+      /* Top-left */ 100% 100%,
+      /* Top-right */ 50% 150%,
+      /* Bottom-right */ 0% 100%
+    );
+  }
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  direction: ltr;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://wallpaperaccess.com/full/165694.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  animation: color-change 6s linear infinite, flip-card 0.6s;
+  border: 3px dashed #d4c23e;
+  width: 150px;
+  height: 200px;
+  background-color: #13161e;
+  border-radius: 5px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes flip-card {
+  0% {
+    transform: perspective(400px) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(400px) rotateY(180deg);
+  }
+  100% {
+    transform: perspective(400px) rotateY(360deg);
+  }
+}
+
+@keyframes color-change {
+  0%,
+  100% {
+    border-color: #7b405f;
+  }
+
+  25% {
+    border-color: #8b4513;
+  }
+
+  50% {
+    border-color: #496779;
+  }
+
+  75% {
+    border-color: #36243e;
+  }
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.makegamer {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+
+.gamer {
+  margin-left: 20px;
+  margin-top: 300px;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  border: 10px #967ba1;
+  border-radius: 7px;
+}
+
+.ps {
+  color: #d4c23e;
+  font-size: 40px;
+}
+
+.imgc img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
